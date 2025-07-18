@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+            margin: 100px auto;
+            display: flex;
+        }
+
+        .Drop {
+            width: 450px;
+            height: 250px;
+            border: 2px solid black;
+            background-color: gainsboro;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+           
+
+
+            >.content {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                background-color: white;
+                margin-top: 80px;
+                margin-inline: auto;
+                display: none;
+            }
+        }
+
+        .stand {
+            width: 350px;
+            height: 10px;
+            background-color: rgb(97, 58, 6);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        .dd {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 34.5%;
+        }
+
+        .Drag1 {
+
+            background-color: rgb(162, 123, 216);
+            left: 2%;
+        }
+
+        .Drag2 {
+            border-radius: 50%;
+            background-color: rgb(186, 220, 99);
+            left: 10%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <button>Drag and Drop</button>
+    <div class="Drop">
+        <div class="content"></div>
+    </div>
+    <div class="stand"></div>
+    <div class="Drag1 dd"></div>
+    <div class="Drag2 dd"></div>
+</body>
+<script src="js/main.js"></script>
+
+</html>

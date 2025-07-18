@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .circle {
+        border: 2px solid black;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        pointer-events: none;
+        transition: .1s;
+        z-index: 999;
+    }
+</style>
+
+<body>
+    <div class="circle"></div>
+</body>
+<script>
+    const circle = document.querySelector('.circle')
+
+    document.addEventListener('mousemove', (e) => {
+        const y = e.clientY
+        const x = e.clientX
+        circle.style.left = x + 'px'
+        circle.style.top = y + 'px'
+
+    })
+</script>
+
+</html>

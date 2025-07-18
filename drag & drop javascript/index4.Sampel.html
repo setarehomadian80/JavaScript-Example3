@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .box {
+        border: 2px solid black;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 400px;
+        height: 200px;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+<body>
+    <div class="box">
+        <h2 class="h1"></h2>
+        <h2 class="h2"></h2>
+        <h2 class="h3"></h2>
+    </div>
+</body>
+<script>
+    const box = document.querySelector('.box')
+
+
+    box.addEventListener('mousedown', () => {
+        const h1 = document.querySelector('.h1')
+        h1.innerText = 'mousedown'
+    });
+    box.addEventListener('click', () => {
+        const h2 = document.querySelector('.h2')
+        h2.innerText = 'click'
+    });
+     box.addEventListener('mouseup', () => {
+        const h3 = document.querySelector('.h3')
+        h3.innerText = 'mouseup'
+    });
+</script>
+
+</html>
